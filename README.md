@@ -98,3 +98,14 @@ Best Case: O(n log n)
 Average Case: O(n log n)
 Worst Case: O(n log n)
 Space: O(n)
+
+
+Algorithm       Theoretical Depth   Measured Depth
+
+MergeSort       log₂n               ~log₂n + 2
+
+QuickSort       O(log n) expected   ~1.5 log₂n
+
+Deterministic   O(log n)            ~2 log n
+
+ClosestPair     log₂n               ~log₂n + 1

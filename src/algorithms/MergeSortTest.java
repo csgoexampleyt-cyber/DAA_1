@@ -19,13 +19,15 @@ public class MergeSortTest {
             int n = rand.nextInt(100) + 1;
             int[] arr = randomArray(n);
             int[] copy = Arrays.copyOf(arr, n);
-            MergeSort.sort(arr);
+
+            Metrics metrics = new Metrics();
+            MergeSort.sort(arr, metrics);
+
             Arrays.sort(copy);
             if (!Arrays.equals(arr, copy)) {
                 throw new AssertionError("Random test failed: " + Arrays.toString(arr));
             }
         }
-
     }
 
     private static void testAdversarialArrays() {
@@ -33,13 +35,15 @@ public class MergeSortTest {
 
         for(int[] arr : cases) {
             int[] copy = Arrays.copyOf(arr, arr.length);
-            MergeSort.sort(arr);
+
+            Metrics metrics = new Metrics();
+            MergeSort.sort(arr, metrics);
+
             Arrays.sort(copy);
             if (!Arrays.equals(arr, copy)) {
                 throw new AssertionError("Adversarial test failed");
             }
         }
-
     }
 
     private static int[] randomArray(int n) {

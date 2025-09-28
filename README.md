@@ -110,3 +110,19 @@ QuickSort       O(log n) expected   ~1.5 log₂n
 Deterministic   O(log n)            ~2 log n
 
 ClosestPair     log₂n               ~log₂n + 1
+
+
+MergeSort
+O(nlogn), stable, great for big datasets.
+Needs extra memory, slower constants, not in-place.
+
+QuickSort
+Super fast in practice, in-place, cache-friendly.
+𝑂(𝑛^2), not stable, pivot choice matters.
+
+Deterministic Select
+O(n), reliable even on bad inputs.
+Slower in practice, complex, more comparisons.
+
+Closest Pair
+O(n logn ), works in 2D and higher, robust.

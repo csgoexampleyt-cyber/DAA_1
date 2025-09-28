@@ -52,3 +52,15 @@ Recurrence: T(n) = 2T(n/2) + O(n log n)
 Method: Modified Master Theorem
 Result: Θ(n log² n)
 Intuition: Strip processing adds log n factor to standard divide-and-conquer
+
+
+
+MergeSort shows consistent n log n growth
+
+QuickSort has higher variance due to random pivots(Assignment told me to randomize pivots)
+
+DeterministicSelect has larger constants but linear growth
+
+ClosestPair shows n log² n scaling clearly
+
+<img width="592" height="366" alt="image" src="https://github.com/user-attachments/assets/a5706539-2d5b-447e-bf6a-6dbc6f3b09ca" />

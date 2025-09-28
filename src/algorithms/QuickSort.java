@@ -3,37 +3,35 @@ import java.util.Random;
 
 public class QuickSort {
     private static final Random rand = new Random();
-    private static int maxDepth;
 
     public QuickSort() {
     }
 
-    public static void sort(int[] arr) {
-        maxDepth = 0;
-        quickSort(arr, 0, arr.length - 1, 1);
+    public static void sort(int[] arr, Metrics metrics) {
+        metrics.startTimer();
+        quickSort(arr, 0, arr.length - 1, metrics);
+        metrics.stopTimer();
     }
 
-    public static int getMaxDepth() {
-        return maxDepth;
-    }
+    private static void quickSort(int[] arr, int left, int right, Metrics metrics) {
+        metrics.enterRecursion();
 
-    private static void quickSort(int[] arr, int left, int right, int depth) {
         while(left < right) {
-            if (depth > maxDepth) {
-                maxDepth = depth;
-            }
-
             int pivotIndex = left + rand.nextInt(right - left + 1);
             int pivot = arr[pivotIndex];
             int i = left;
             int j = right;
 
             while(i <= j) {
-                while(arr[i] < pivot) {
+                while(i <= right) {
+                    metrics.incrementComparisons();
+                    if (arr[i] >= pivot) break;
                     ++i;
                 }
 
-                while(arr[j] > pivot) {
+                while(j >= left) {
+                    metrics.incrementComparisons();
+                    if (arr[j] <= pivot) break;
                     --j;
                 }
 
@@ -44,26 +42,31 @@ public class QuickSort {
                 }
             }
 
+            metrics.incrementComparisons();
             if (j - left < right - i) {
                 if (left < j) {
-                    quickSort(arr, left, j, depth + 1);
+                    quickSort(arr, left, j, metrics);
                 }
-
                 left = i;
             } else {
                 if (i < right) {
-                    quickSort(arr, i, right, depth + 1);
+                    quickSort(arr, i, right, metrics);
                 }
-
                 right = j;
             }
         }
 
+        metrics.exitRecursion();
     }
 
     private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
+    }
+
+    public static void sort(int[] arr) {
+        Metrics metrics = new Metrics();
+        sort(arr, metrics);
     }
 }

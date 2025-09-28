@@ -100,6 +100,8 @@ Worst Case: O(n log n)
 Space: O(n)
 
 
+
+
 Algorithm       Theoretical Depth   Measured Depth
 
 MergeSort       log₂n               ~log₂n + 2

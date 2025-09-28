@@ -1,3 +1,5 @@
+# The whole code is inside the feature branch
+
 # Design and Analysis of Algorithms
 
 Architecture Notes

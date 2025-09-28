@@ -1,0 +1,21 @@
+Algorithm,InputSize,Comparisons,Allocations,MaxRecursionDepth,TimeNanos,Correct,AdditionalInfo
+MergeSort,100,661,400,4,171600,YES,Comparisons=661
+QuickSort,100,1073,0,4,98900,YES,Comparisons=1073
+DeterministicSelect,100,325,103,8,122500,YES,"k=98, result=9855, expected=9855"
+ClosestPair,100,773,63,6,5397700,YES,distance=7.29126232416871
+MergeSort,500,4632,3000,6,222500,YES,Comparisons=4632
+QuickSort,500,6877,0,7,293300,YES,Comparisons=6877
+DeterministicSelect,500,1661,500,9,225000,YES,"k=360, result=7417, expected=7417"
+ClosestPair,500,5312,255,8,2479200,YES,distance=1.6533297991722813
+MergeSort,1000,10274,7000,7,521100,YES,Comparisons=10274
+QuickSort,1000,14110,0,7,350000,YES,Comparisons=14110
+DeterministicSelect,1000,2837,1005,10,685500,YES,"k=252, result=2631, expected=2631"
+ClosestPair,1000,12175,511,9,3496400,YES,distance=0.8551878856481008
+MergeSort,5000,58638,50000,10,945600,YES,Comparisons=58638
+QuickSort,5000,85502,0,8,4095700,YES,Comparisons=85502
+DeterministicSelect,5000,15458,4935,12,1250700,YES,"k=1200, result=2424, expected=2424"
+ClosestPair,5000,79115,3855,12,15065400,YES,distance=0.18930437202767542
+MergeSort,10000,127271,110000,11,2135300,YES,Comparisons=127271
+QuickSort,10000,188798,0,9,4063300,YES,Comparisons=188798
+DeterministicSelect,10000,35911,9854,13,6197900,YES,"k=7662, result=7629, expected=7629"
+ClosestPair,10000,171563,7711,13,71902400,YES,distance=0.04953481451474499

@@ -53,8 +53,6 @@ Method: Modified Master Theorem
 Result: Θ(n log² n)
 Intuition: Strip processing adds log n factor to standard divide-and-conquer
 
-
-
 MergeSort shows consistent n log n growth
 
 QuickSort has higher variance due to random pivots(Assignment told me to randomize pivots)
@@ -63,4 +61,38 @@ DeterministicSelect has larger constants but linear growth
 
 ClosestPair shows n log² n scaling clearly
 
-<img width="592" height="366" alt="image" src="https://github.com/user-attachments/assets/a5706539-2d5b-447e-bf6a-6dbc6f3b09ca" />
+<img width="580" height="360" alt="image" src="https://github.com/user-attachments/assets/a5706539-2d5b-447e-bf6a-6dbc6f3b09ca" />
+
+<img width="580" height="360" alt="image" src="https://github.com/user-attachments/assets/399c01b7-cc30-4ac9-aef4-d5e866e3d2aa" />
+
+<img width="580" height="360" alt="image" src="https://github.com/user-attachments/assets/d45b85fd-57c6-43e3-9b8c-d57604739ef0" />
+
+# Theory vs Measurements Alignment
+
+Time Complexity: All algorithms match theoretical bounds
+Recursion Depth: Logarithmic growth confirmed for all algorithms
+Comparison Counts: Follow expected theoretical patterns
+
+MergeSort:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+Space: O(n)
+
+QuickSort:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n²)
+Space: O(log n)
+
+DeterministicSelect:
+Best Case: O(n)
+Average Case: O(n)
+Worst Case: O(n)
+Space: O(log n)
+
+ClosestPair:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+Space: O(n)
